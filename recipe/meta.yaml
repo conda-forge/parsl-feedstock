@@ -1,6 +1,6 @@
 {% set name = "parsl" %}
-{% set version = "0.9.0" %}
-{% set sha256 = "6bd29350fa13e3b5efbd7cd21b37b299eb31fe1501602494b4a2dbdaff0a8cbf" %}
+{% set version = "1.0.0" %}
+{% set sha256 = "6e89cae32da7057ea3fbee278f6e11145697dc773f3a1b94acd2d63cbff7fc70" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - parsl-globus-auth = parsl.data_provider.globus:cli_run
 
@@ -51,7 +51,7 @@ about:
   home: https://github.com/Parsl/parsl
   license: Apache 2.0
   license_file: LICENSE
-  summary: 'Simple parallel workflows system for Python'
+  summary: Simple parallel workflows system for Python
 
   description: |
     Parsl is a Python library for programming and executing 
