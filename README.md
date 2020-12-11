@@ -3,11 +3,15 @@ About parsl
 
 Home: https://github.com/Parsl/parsl
 
-Package license: Apache 2.0
+Package license: Apache-2.0
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/parsl-feedstock/blob/master/LICENSE.txt)
 
 Summary: Simple parallel workflows system for Python
+
+Development: https://github.com/Parsl/parsl
+
+Documentation: https://parsl.readthedocs.io/
 
 Parsl is a Python library for programming and executing
 data-oriented workflows (dataflows) in parallel.
@@ -119,5 +123,6 @@ Feedstock Maintainers
 =====================
 
 * [@ZhuozhaoLi](https://github.com/ZhuozhaoLi/)
+* [@xylar](https://github.com/xylar/)
 * [@yadudoc](https://github.com/yadudoc/)
 
