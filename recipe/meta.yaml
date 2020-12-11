@@ -24,7 +24,7 @@ requirements:
   run:
     - python >=3.5
     - pyzmq >=17.1.2
-    - typeguard
+    - typeguard >=2.5
     - ipyparallel
     - globus-sdk
     - dill
@@ -32,12 +32,12 @@ requirements:
     - ipykernel
     - requests
     - paramiko
-    - psutil
+    - psutil >=5.5.1
     - sqlalchemy >=1.3.0,!=1.3.4
     - sqlalchemy-utils
     - pydot
     - networkx
-    - flask
+    - flask >=1.0.2
     - flask-sqlalchemy
     - pandas
     - plotly
