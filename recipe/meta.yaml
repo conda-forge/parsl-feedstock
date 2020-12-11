@@ -37,7 +37,7 @@ requirements:
     - sqlalchemy-utils
     - pydot
     - networkx
-    - Flask
+    - flask
     - flask-sqlalchemy
     - pandas
     - plotly
