@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
@@ -24,7 +24,7 @@ requirements:
   run:
     - python >=3.5
     - pyzmq >=17.1.2
-    - typeguard
+    - typeguard >=2.5
     - ipyparallel
     - globus-sdk
     - dill
@@ -32,12 +32,12 @@ requirements:
     - ipykernel
     - requests
     - paramiko
-    - psutil
-    - sqlalchemy ==1.3.3
+    - psutil >=5.5.1
+    - sqlalchemy >=1.3.0,!=1.3.4
     - sqlalchemy-utils
     - pydot
     - networkx
-    - Flask
+    - flask >=1.0.2
     - flask-sqlalchemy
     - pandas
     - plotly
@@ -63,3 +63,4 @@ extra:
   recipe-maintainers:
     - ZhuozhaoLi
     - yadudoc
+    - xylar
