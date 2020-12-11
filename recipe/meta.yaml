@@ -33,7 +33,7 @@ requirements:
     - requests
     - paramiko
     - psutil
-    - sqlalchemy ==1.3.3
+    - sqlalchemy >=1.3.0,!=1.3.4
     - sqlalchemy-utils
     - pydot
     - networkx
