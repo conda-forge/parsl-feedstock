@@ -2,8 +2,9 @@
 {% set version = "1.2.0" %}
 {% set sha256 = "342c74ee39fa210d74b8adfb455f0a9c20d9f059ec5bd9d60c5bdc9929abcdcc" %}
 
+
 package:
-  name: {{ name|lower }}
+  name: {{ name|lower }}-split
   version: {{ version }}
 
 source:
@@ -13,44 +14,243 @@ source:
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
-  entry_points:
-    - parsl-globus-auth = parsl.data_provider.globus:cli_run
 
 requirements:
   host:
-    - python >=3.5
+    - python >=3.6
     - pip
   run:
-    - python >=3.5
-    # requirements.txt
-    - pyzmq >=17.1.2
-    - typeguard >=2.10
-    - typing-extensions
-    - globus-sdk
-    - dill
-    - tblib
-    - requests
-    - paramiko
-    - psutil >=5.5.1
-    # [monitoring]
-    - sqlalchemy >=1.3.0,!=1.3.4,<1.4
-    - sqlalchemy-utils
-    - pydot
-    - networkx
-    - flask >=1.0.2
-    - flask-sqlalchemy
-    - pandas
-    - plotly
-    - python-daemon
+    - python >=3.6
 
-test:
-  requires:
-    - pip
-  imports:
-    - parsl
-  commands:
-    - pip check
+outputs:
+  - name: {{ name }}
+    script: install_parsl.sh
+    build:
+      noarch: python
+      entry_points:
+        - parsl-globus-auth = parsl.data_provider.globus:cli_run
+
+    requirements:
+      host:
+        - python >=3.6
+        - pip
+      run:
+        - python >=3.6
+        # requirements.txt
+        - pyzmq >=17.1.2
+        - typeguard >=2.10
+        - typing-extensions
+        - globus-sdk
+        - dill
+        - tblib
+        - requests
+        - paramiko
+        - psutil >=5.5.1
+
+    test:
+      requires:
+        - pip
+      imports:
+        - parsl
+      commands:
+        - pip check
+
+  - name: {{ name }}-with-monitoring
+    build:
+      noarch: python
+    requirements:
+      host:
+        - python >=3.6
+      run:
+        - python >=3.6
+        - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
+        - sqlalchemy >=1.3.0,!=1.3.4,<1.4
+        - sqlalchemy-utils
+        - pydot
+        - networkx
+        - flask >=1.0.2
+        - flask-sqlalchemy
+        - pandas
+        - plotly
+        - python-daemon
+    test:
+      imports:
+        - parsl
+        - parsl.monitoring
+      commands:
+        - pip check
+      requires:
+        - pip
+
+  - name: {{ name }}-with-aws
+    build:
+      noarch: python
+    requirements:
+      host:
+        - python >=3.6
+      run:
+        - python >=3.6
+        - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
+        - boto3
+    test:
+      imports:
+        - parsl
+      commands:
+        - pip check
+      requires:
+        - pip
+
+  - name: {{ name }}-with-kubernetes
+    build:
+      noarch: python
+    requirements:
+      host:
+        - python >=3.6
+      run:
+        - python >=3.6
+        - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
+        - kubernetes
+    test:
+      imports:
+        - parsl
+      commands:
+        - pip check
+      requires:
+        - pip
+
+# oauth-ssh not on conda-forge
+#  - name: {{ name }}-with-oauth_ssh
+#    build:
+#      noarch: python
+#    requirements:
+#      host:
+#        - python >=3.6
+#      run:
+#        - python >=3.6
+#        - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
+#        - oauth-ssh >=0.9
+#    test:
+#      imports:
+#        - parsl
+#      commands:
+#        - pip check
+#      requires:
+#        - pip
+
+  - name: {{ name }}-with-extreme_scale
+    build:
+      noarch: python
+    requirements:
+      host:
+        - python >=3.6
+      run:
+        - python >=3.6
+        - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
+        - mpi4py
+    test:
+      imports:
+        - parsl
+      commands:
+        - pip check
+      requires:
+        - pip
+
+  - name: {{ name }}-with-google_cloud
+    build:
+      noarch: python
+    requirements:
+      host:
+        - python >=3.6
+      run:
+        - python >=3.6
+        - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
+        - google-auth
+        - google-api-python-client
+    test:
+      imports:
+        - parsl
+      commands:
+        - pip check
+      requires:
+        - pip
+
+  - name: {{ name }}-with-gssapi
+    build:
+      noarch: python
+    requirements:
+      host:
+        - python >=3.6
+      run:
+        - python >=3.6
+        - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
+        - python-gssapi
+    test:
+      imports:
+        - parsl
+      commands:
+        - pip check
+      requires:
+        - pip
+
+# azure 3.0.0 was not built for linux
+#  - name: {{ name }}-with-azure
+#    build:
+#      noarch: python
+#    requirements:
+#      host:
+#        - python >=3.6
+#      run:
+#        - python >=3.6
+#        - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
+#        - azure <=4
+#        - msrestazure
+#    test:
+#      imports:
+#        - parsl
+#      commands:
+#        - pip check
+#      requires:
+#        - pip
+
+  - name: {{ name }}-with-workqueue
+    build:
+      noarch: python
+    requirements:
+      host:
+        - python >=3.6
+      run:
+        - python >=3.6
+        - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
+        - ndcctools
+        # there is no work_queue pypi or conda-forge package
+        # - work_queue
+    test:
+      imports:
+        - parsl
+      commands:
+        - pip check
+      requires:
+        - pip
+
+  - name: {{ name }}-with-flux
+    build:
+      noarch: python
+    requirements:
+      host:
+        - python >=3.6
+      run:
+        - python >=3.6
+        - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
+        - pyyaml
+        - cffi
+        - jsonschema
+    test:
+      imports:
+        - parsl
+      commands:
+        - pip check
+      requires:
+        - pip
 
 about:
   home: https://github.com/Parsl/parsl
