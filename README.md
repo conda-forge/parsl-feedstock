@@ -1,5 +1,5 @@
-About parsl
-===========
+About parsl-split
+=================
 
 Home: https://github.com/Parsl/parsl
 
@@ -36,21 +36,29 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-parsl-green.svg)](https://anaconda.org/conda-forge/parsl) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/parsl.svg)](https://anaconda.org/conda-forge/parsl) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/parsl.svg)](https://anaconda.org/conda-forge/parsl) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/parsl.svg)](https://anaconda.org/conda-forge/parsl) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-parsl--with--aws-green.svg)](https://anaconda.org/conda-forge/parsl-with-aws) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/parsl-with-aws.svg)](https://anaconda.org/conda-forge/parsl-with-aws) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/parsl-with-aws.svg)](https://anaconda.org/conda-forge/parsl-with-aws) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/parsl-with-aws.svg)](https://anaconda.org/conda-forge/parsl-with-aws) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-parsl--with--extreme_scale-green.svg)](https://anaconda.org/conda-forge/parsl-with-extreme_scale) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/parsl-with-extreme_scale.svg)](https://anaconda.org/conda-forge/parsl-with-extreme_scale) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/parsl-with-extreme_scale.svg)](https://anaconda.org/conda-forge/parsl-with-extreme_scale) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/parsl-with-extreme_scale.svg)](https://anaconda.org/conda-forge/parsl-with-extreme_scale) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-parsl--with--flux-green.svg)](https://anaconda.org/conda-forge/parsl-with-flux) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/parsl-with-flux.svg)](https://anaconda.org/conda-forge/parsl-with-flux) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/parsl-with-flux.svg)](https://anaconda.org/conda-forge/parsl-with-flux) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/parsl-with-flux.svg)](https://anaconda.org/conda-forge/parsl-with-flux) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-parsl--with--google_cloud-green.svg)](https://anaconda.org/conda-forge/parsl-with-google_cloud) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/parsl-with-google_cloud.svg)](https://anaconda.org/conda-forge/parsl-with-google_cloud) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/parsl-with-google_cloud.svg)](https://anaconda.org/conda-forge/parsl-with-google_cloud) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/parsl-with-google_cloud.svg)](https://anaconda.org/conda-forge/parsl-with-google_cloud) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-parsl--with--gssapi-green.svg)](https://anaconda.org/conda-forge/parsl-with-gssapi) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/parsl-with-gssapi.svg)](https://anaconda.org/conda-forge/parsl-with-gssapi) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/parsl-with-gssapi.svg)](https://anaconda.org/conda-forge/parsl-with-gssapi) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/parsl-with-gssapi.svg)](https://anaconda.org/conda-forge/parsl-with-gssapi) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-parsl--with--kubernetes-green.svg)](https://anaconda.org/conda-forge/parsl-with-kubernetes) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/parsl-with-kubernetes.svg)](https://anaconda.org/conda-forge/parsl-with-kubernetes) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/parsl-with-kubernetes.svg)](https://anaconda.org/conda-forge/parsl-with-kubernetes) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/parsl-with-kubernetes.svg)](https://anaconda.org/conda-forge/parsl-with-kubernetes) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-parsl--with--monitoring-green.svg)](https://anaconda.org/conda-forge/parsl-with-monitoring) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/parsl-with-monitoring.svg)](https://anaconda.org/conda-forge/parsl-with-monitoring) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/parsl-with-monitoring.svg)](https://anaconda.org/conda-forge/parsl-with-monitoring) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/parsl-with-monitoring.svg)](https://anaconda.org/conda-forge/parsl-with-monitoring) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-parsl--with--workqueue-green.svg)](https://anaconda.org/conda-forge/parsl-with-workqueue) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/parsl-with-workqueue.svg)](https://anaconda.org/conda-forge/parsl-with-workqueue) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/parsl-with-workqueue.svg)](https://anaconda.org/conda-forge/parsl-with-workqueue) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/parsl-with-workqueue.svg)](https://anaconda.org/conda-forge/parsl-with-workqueue) |
 
-Installing parsl
-================
+Installing parsl-split
+======================
 
-Installing `parsl` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `parsl-split` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `parsl` can be installed with:
+Once the `conda-forge` channel has been enabled, `parsl, parsl-with-aws, parsl-with-extreme_scale, parsl-with-flux, parsl-with-google_cloud, parsl-with-gssapi, parsl-with-kubernetes, parsl-with-monitoring, parsl-with-workqueue` can be installed with:
 
 ```
-conda install parsl
+conda install parsl parsl-with-aws parsl-with-extreme_scale parsl-with-flux parsl-with-google_cloud parsl-with-gssapi parsl-with-kubernetes parsl-with-monitoring parsl-with-workqueue
 ```
 
 It is possible to list all of the versions of `parsl` available on your platform with:
@@ -63,7 +71,8 @@ conda search parsl --channel conda-forge
 About conda-forge
 =================
 
-[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
+[![Powered by
+NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](https://numfocus.org)
 
 conda-forge is a community-led conda channel of installable packages.
 In order to provide high-quality builds, the process has been automated into the
@@ -98,17 +107,17 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating parsl-feedstock
-========================
+Updating parsl-split-feedstock
+==============================
 
-If you would like to improve the parsl recipe or build a new
+If you would like to improve the parsl-split recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/parsl-feedstock are
+Note that all branches in the conda-forge/parsl-split-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.
