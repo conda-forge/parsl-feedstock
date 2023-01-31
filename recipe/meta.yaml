@@ -46,6 +46,10 @@ outputs:
         - requests
         - paramiko
         - psutil >=5.5.1
+        - setproctitle
+        - types-paramiko
+        - types-requests
+        - types-six
 
     test:
       requires:
