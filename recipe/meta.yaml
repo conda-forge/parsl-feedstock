@@ -1,6 +1,6 @@
 {% set name = "parsl" %}
-{% set version = "1.2.0" %}
-{% set sha256 = "342c74ee39fa210d74b8adfb455f0a9c20d9f059ec5bd9d60c5bdc9929abcdcc" %}
+{% set version = "2023.1.30" %}
+{% set sha256 = "6c7de1d635cd448a946768f9a1639b21b8900a071c233dab003c4eded4ed665f" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/Parsl/{{ name }}/archive/{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
@@ -40,12 +40,18 @@ outputs:
         - pyzmq >=17.1.2
         - typeguard >=2.10
         - typing-extensions
+        - types-paramiko
+        - types-requests
+        - types-six
+        - six
         - globus-sdk
         - dill
         - tblib
         - requests
         - paramiko
         - psutil >=5.5.1
+        - setproctitle
+
 
     test:
       requires:
