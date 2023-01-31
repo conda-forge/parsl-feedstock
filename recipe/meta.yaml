@@ -40,6 +40,10 @@ outputs:
         - pyzmq >=17.1.2
         - typeguard >=2.10
         - typing-extensions
+        - types-paramiko
+        - types-requests
+        - types-six
+        - six
         - globus-sdk
         - dill
         - tblib
@@ -47,9 +51,7 @@ outputs:
         - paramiko
         - psutil >=5.5.1
         - setproctitle
-        - types-paramiko
-        - types-requests
-        - types-six
+
 
     test:
       requires:
