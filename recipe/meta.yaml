@@ -1,6 +1,6 @@
 {% set name = "parsl" %}
-{% set version = "2023.1.30" %}
-{% set sha256 = "6c7de1d635cd448a946768f9a1639b21b8900a071c233dab003c4eded4ed665f" %}
+{% set version = "2023.2.6" %}
+{% set sha256 = "c5e510d5d25e59f3dbdcf30d7df8babeb49ac13a39d736cc46c868e8a5de2175" %}
 
 
 package:
