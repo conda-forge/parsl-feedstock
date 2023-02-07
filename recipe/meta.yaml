@@ -50,6 +50,7 @@ outputs:
         - requests
         - paramiko
         - psutil >=5.5.1
+        - setproctitle
 
     test:
       requires:
