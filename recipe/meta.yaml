@@ -1,6 +1,6 @@
 {% set name = "parsl" %}
-{% set version = "2023.2.6" %}
-{% set sha256 = "c5e510d5d25e59f3dbdcf30d7df8babeb49ac13a39d736cc46c868e8a5de2175" %}
+{% set version = "2023.2.13" %}
+{% set sha256 = "9f6cdae4f9ccb319e95ed8c952bc62241cb7d15588e233ae6e3f99cfb687c617" %}
 
 
 package:
@@ -77,7 +77,7 @@ outputs:
         - pandas <1.4
         - plotly
         - python-daemon
-        
+
     test:
       imports:
         - parsl
