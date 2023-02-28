@@ -1,11 +1,158 @@
+About parsl-split-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/parsl-feedstock/blob/main/LICENSE.txt)
+
 About parsl-split
-=================
+-----------------
 
 Home: https://github.com/Parsl/parsl
 
 Package license: Apache-2.0
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/parsl-feedstock/blob/main/LICENSE.txt)
+Summary: Simple parallel workflows system for Python
+
+Development: https://github.com/Parsl/parsl
+
+Documentation: https://parsl.readthedocs.io/
+
+Parsl is a Python library for programming and executing 
+data-oriented workflows (dataflows) in parallel.
+
+About parsl
+-----------
+
+Home: https://github.com/Parsl/parsl
+
+Package license: Apache-2.0
+
+Summary: Simple parallel workflows system for Python
+
+Development: https://github.com/Parsl/parsl
+
+Documentation: https://parsl.readthedocs.io/
+
+Parsl is a Python library for programming and executing
+data-oriented workflows (dataflows) in parallel.
+
+About parsl-with-aws
+--------------------
+
+Home: https://github.com/Parsl/parsl
+
+Package license: Apache-2.0
+
+Summary: Simple parallel workflows system for Python
+
+Development: https://github.com/Parsl/parsl
+
+Documentation: https://parsl.readthedocs.io/
+
+Parsl is a Python library for programming and executing
+data-oriented workflows (dataflows) in parallel.
+
+About parsl-with-extreme_scale
+------------------------------
+
+Home: https://github.com/Parsl/parsl
+
+Package license: Apache-2.0
+
+Summary: Simple parallel workflows system for Python
+
+Development: https://github.com/Parsl/parsl
+
+Documentation: https://parsl.readthedocs.io/
+
+Parsl is a Python library for programming and executing
+data-oriented workflows (dataflows) in parallel.
+
+About parsl-with-flux
+---------------------
+
+Home: https://github.com/Parsl/parsl
+
+Package license: Apache-2.0
+
+Summary: Simple parallel workflows system for Python
+
+Development: https://github.com/Parsl/parsl
+
+Documentation: https://parsl.readthedocs.io/
+
+Parsl is a Python library for programming and executing
+data-oriented workflows (dataflows) in parallel.
+
+About parsl-with-google_cloud
+-----------------------------
+
+Home: https://github.com/Parsl/parsl
+
+Package license: Apache-2.0
+
+Summary: Simple parallel workflows system for Python
+
+Development: https://github.com/Parsl/parsl
+
+Documentation: https://parsl.readthedocs.io/
+
+Parsl is a Python library for programming and executing
+data-oriented workflows (dataflows) in parallel.
+
+About parsl-with-gssapi
+-----------------------
+
+Home: https://github.com/Parsl/parsl
+
+Package license: Apache-2.0
+
+Summary: Simple parallel workflows system for Python
+
+Development: https://github.com/Parsl/parsl
+
+Documentation: https://parsl.readthedocs.io/
+
+Parsl is a Python library for programming and executing
+data-oriented workflows (dataflows) in parallel.
+
+About parsl-with-kubernetes
+---------------------------
+
+Home: https://github.com/Parsl/parsl
+
+Package license: Apache-2.0
+
+Summary: Simple parallel workflows system for Python
+
+Development: https://github.com/Parsl/parsl
+
+Documentation: https://parsl.readthedocs.io/
+
+Parsl is a Python library for programming and executing
+data-oriented workflows (dataflows) in parallel.
+
+About parsl-with-monitoring
+---------------------------
+
+Home: https://github.com/Parsl/parsl
+
+Package license: Apache-2.0
+
+Summary: Simple parallel workflows system for Python
+
+Development: https://github.com/Parsl/parsl
+
+Documentation: https://parsl.readthedocs.io/
+
+Parsl is a Python library for programming and executing
+data-oriented workflows (dataflows) in parallel.
+
+About parsl-with-workqueue
+--------------------------
+
+Home: https://github.com/Parsl/parsl
+
+Package license: Apache-2.0
 
 Summary: Simple parallel workflows system for Python
 
