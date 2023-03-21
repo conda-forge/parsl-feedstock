@@ -1,5 +1,5 @@
 {% set name = "parsl" %}
-{% set version = "2023.3.13" %}
+{% set version = "2023.3.20" %}
 
 package:
   name: {{ name|lower }}-split
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/parsl-{{ version }}.tar.gz
-  sha256: 5031e2aa88001cc481d03d8f01d4672a6f30ff28da3b4cefe2eff73740ced1e5
+  sha256: 69b326485117840e84a1f64fbd3a836a78871541f394466688fe2b4edd2f29f6
 
 build:
   number: 0
@@ -36,7 +36,7 @@ outputs:
         - python >=3.7
         # requirements.txt
         - pyzmq >=17.1.2
-        - typeguard >=2.10
+        - typeguard >=2.10,<3
         - typing-extensions
         - types-paramiko
         - types-requests
@@ -140,24 +140,6 @@ outputs:
 #        - pip check
 #      requires:
 #        - pip
-
-  - name: {{ name }}-with-extreme_scale
-    build:
-      noarch: python
-    requirements:
-      host:
-        - python >=3.7
-      run:
-        - python >=3.7
-        - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
-        - mpi4py
-    test:
-      imports:
-        - parsl
-      commands:
-        - pip check
-      requires:
-        - pip
 
   - name: {{ name }}-with-google_cloud
     build:
