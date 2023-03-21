@@ -141,24 +141,6 @@ outputs:
 #      requires:
 #        - pip
 
-  - name: {{ name }}-with-extreme_scale
-    build:
-      noarch: python
-    requirements:
-      host:
-        - python >=3.7
-      run:
-        - python >=3.7
-        - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
-        - mpi4py
-    test:
-      imports:
-        - parsl
-      commands:
-        - pip check
-      requires:
-        - pip
-
   - name: {{ name }}-with-google_cloud
     build:
       noarch: python
