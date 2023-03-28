@@ -51,22 +51,6 @@ Documentation: https://parsl.readthedocs.io/
 Parsl is a Python library for programming and executing
 data-oriented workflows (dataflows) in parallel.
 
-About parsl-with-extreme_scale
-------------------------------
-
-Home: https://github.com/Parsl/parsl
-
-Package license: Apache-2.0
-
-Summary: Simple parallel workflows system for Python
-
-Development: https://github.com/Parsl/parsl
-
-Documentation: https://parsl.readthedocs.io/
-
-Parsl is a Python library for programming and executing
-data-oriented workflows (dataflows) in parallel.
-
 About parsl-with-flux
 ---------------------
 
@@ -184,7 +168,6 @@ Current release info
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-parsl-green.svg)](https://anaconda.org/conda-forge/parsl) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/parsl.svg)](https://anaconda.org/conda-forge/parsl) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/parsl.svg)](https://anaconda.org/conda-forge/parsl) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/parsl.svg)](https://anaconda.org/conda-forge/parsl) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-parsl--with--aws-green.svg)](https://anaconda.org/conda-forge/parsl-with-aws) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/parsl-with-aws.svg)](https://anaconda.org/conda-forge/parsl-with-aws) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/parsl-with-aws.svg)](https://anaconda.org/conda-forge/parsl-with-aws) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/parsl-with-aws.svg)](https://anaconda.org/conda-forge/parsl-with-aws) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-parsl--with--extreme_scale-green.svg)](https://anaconda.org/conda-forge/parsl-with-extreme_scale) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/parsl-with-extreme_scale.svg)](https://anaconda.org/conda-forge/parsl-with-extreme_scale) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/parsl-with-extreme_scale.svg)](https://anaconda.org/conda-forge/parsl-with-extreme_scale) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/parsl-with-extreme_scale.svg)](https://anaconda.org/conda-forge/parsl-with-extreme_scale) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-parsl--with--flux-green.svg)](https://anaconda.org/conda-forge/parsl-with-flux) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/parsl-with-flux.svg)](https://anaconda.org/conda-forge/parsl-with-flux) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/parsl-with-flux.svg)](https://anaconda.org/conda-forge/parsl-with-flux) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/parsl-with-flux.svg)](https://anaconda.org/conda-forge/parsl-with-flux) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-parsl--with--google_cloud-green.svg)](https://anaconda.org/conda-forge/parsl-with-google_cloud) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/parsl-with-google_cloud.svg)](https://anaconda.org/conda-forge/parsl-with-google_cloud) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/parsl-with-google_cloud.svg)](https://anaconda.org/conda-forge/parsl-with-google_cloud) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/parsl-with-google_cloud.svg)](https://anaconda.org/conda-forge/parsl-with-google_cloud) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-parsl--with--gssapi-green.svg)](https://anaconda.org/conda-forge/parsl-with-gssapi) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/parsl-with-gssapi.svg)](https://anaconda.org/conda-forge/parsl-with-gssapi) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/parsl-with-gssapi.svg)](https://anaconda.org/conda-forge/parsl-with-gssapi) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/parsl-with-gssapi.svg)](https://anaconda.org/conda-forge/parsl-with-gssapi) |
@@ -202,16 +185,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `parsl, parsl-with-aws, parsl-with-extreme_scale, parsl-with-flux, parsl-with-google_cloud, parsl-with-gssapi, parsl-with-kubernetes, parsl-with-monitoring, parsl-with-workqueue` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `parsl, parsl-with-aws, parsl-with-flux, parsl-with-google_cloud, parsl-with-gssapi, parsl-with-kubernetes, parsl-with-monitoring, parsl-with-workqueue` can be installed with `conda`:
 
 ```
-conda install parsl parsl-with-aws parsl-with-extreme_scale parsl-with-flux parsl-with-google_cloud parsl-with-gssapi parsl-with-kubernetes parsl-with-monitoring parsl-with-workqueue
+conda install parsl parsl-with-aws parsl-with-flux parsl-with-google_cloud parsl-with-gssapi parsl-with-kubernetes parsl-with-monitoring parsl-with-workqueue
 ```
 
 or with `mamba`:
 
 ```
-mamba install parsl parsl-with-aws parsl-with-extreme_scale parsl-with-flux parsl-with-google_cloud parsl-with-gssapi parsl-with-kubernetes parsl-with-monitoring parsl-with-workqueue
+mamba install parsl parsl-with-aws parsl-with-flux parsl-with-google_cloud parsl-with-gssapi parsl-with-kubernetes parsl-with-monitoring parsl-with-workqueue
 ```
 
 It is possible to list all of the versions of `parsl` available on your platform with `conda`:
