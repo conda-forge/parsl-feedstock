@@ -1,5 +1,5 @@
 {% set name = "parsl" %}
-{% set version = "2023.7.17" %}
+{% set version = "2023.7.24" %}
 
 package:
   name: {{ name|lower }}-split
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/parsl-{{ version }}.tar.gz
-  sha256: 18b1c169e92a73d1f7129bf16c169d5962b39709d5e06c07017a6d3903f50851
+  sha256: e96f2f10c99222ff0ec87b76bc34e0d178849bc93faabb7b58a669ca8c673af2
 
 build:
   number: 0
@@ -40,9 +40,6 @@ outputs:
         - pyzmq >=17.1.2
         - typeguard >=2.10,<3
         - typing-extensions
-        - types-paramiko
-        - types-requests
-        - types-six
         - six
         - globus-sdk
         - dill
