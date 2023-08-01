@@ -237,6 +237,24 @@ outputs:
       requires:
         - pip
 
+  - name: {{ name }}-with-proxystore
+    build:
+      noarch: python
+    requirements:
+      host:
+        - python >=3.8
+      run:
+        - python >=3.8
+        - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
+        - proxystore
+    test:
+      imports:
+        - parsl
+      commands:
+        - pip check
+      requires:
+        - pip
+
 about:
   home: https://github.com/Parsl/parsl
   license: Apache-2.0
