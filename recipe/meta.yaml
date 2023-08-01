@@ -1,5 +1,5 @@
 {% set name = "parsl" %}
-{% set version = "2023.7.24" %}
+{% set version = "2023.7.31" %}
 
 package:
   name: {{ name|lower }}-split
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/parsl-{{ version }}.tar.gz
-  sha256: e96f2f10c99222ff0ec87b76bc34e0d178849bc93faabb7b58a669ca8c673af2
+  sha256: 077519b8482fb0d376e41a265d51ff141d0d2fec4103cf4648e84aea5a57fd1c
 
 build:
   number: 0
@@ -229,6 +229,24 @@ outputs:
         - pyyaml
         - cffi
         - jsonschema
+    test:
+      imports:
+        - parsl
+      commands:
+        - pip check
+      requires:
+        - pip
+
+  - name: {{ name }}-with-proxystore
+    build:
+      noarch: python
+    requirements:
+      host:
+        - python >=3.8
+      run:
+        - python >=3.8
+        - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
+        - proxystore
     test:
       imports:
         - parsl
