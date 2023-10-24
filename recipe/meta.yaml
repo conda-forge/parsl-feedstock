@@ -1,5 +1,5 @@
 {% set name = "parsl" %}
-{% set version = "2023.10.16" %}
+{% set version = "2023.10.23" %}
 
 package:
   name: {{ name|lower }}-split
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/parsl-{{ version }}.tar.gz
-  sha256: a369dbe895af024ce089744623a39237b7dc63e307d858009a2b3028621d9749
+  sha256: 45cab9d70425d3af17f21f3f2125ae2cc88094251c68d519343570a039d1468a
 
 build:
   number: 0
@@ -66,7 +66,27 @@ outputs:
       run:
         - python >=3.8
         - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
-        - sqlalchemy >=1.3.0,<2
+        - sqlalchemy >=1.4,<2
+
+    test:
+      imports:
+        - parsl
+        - parsl.monitoring
+      commands:
+        - pip check
+      requires:
+        - pip
+
+  - name: {{ name }}-with-visualization
+    build:
+      noarch: python
+    requirements:
+      host:
+        - python >=3.8
+      run:
+        - python >=3.8
+        - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
+        - {{ name }}-with-monitoring
         - pydot
         - networkx >=2.5,<2.6
         - flask >=1.0.2
@@ -82,6 +102,7 @@ outputs:
         - parsl.monitoring
       commands:
         - pip check
+        - parsl-visualize --help
       requires:
         - pip
 
