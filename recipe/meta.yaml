@@ -234,9 +234,11 @@ outputs:
       imports:
         - parsl
       commands:
-        - pip check
+        # temporarily disable pip check because conda 23.10.0 (a dependency of ndcctools) 
+        # is failing pip check becaue of https://github.com/conda-forge/conda-feedstock/pull/225
+        # - pip check
       requires:
-        - pip
+        # - pip
 
   - name: {{ name }}-with-flux
     build:
