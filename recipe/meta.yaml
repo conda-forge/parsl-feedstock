@@ -1,5 +1,5 @@
 {% set name = "parsl" %}
-{% set version = "2023.11.13" %}
+{% set version = "2023.11.20" %}
 
 package:
   name: {{ name|lower }}-split
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/parsl-{{ version }}.tar.gz
-  sha256: f593da1875de43afffd11bb71e76c791330d5f99bc16848e127a566ce030e9ba
+  sha256: 491bec22b5925c5c96b4494c6b8f1452d183864b14de060974fadd74b7d9dce2
 
 build:
   number: 0
@@ -270,6 +270,24 @@ outputs:
         - python >=3.8
         - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
         - proxystore
+    test:
+      imports:
+        - parsl
+      commands:
+        - pip check
+      requires:
+        - pip
+
+  - name: {{ name }}-with-radical-pilot
+    build:
+      noarch: python
+    requirements:
+      host:
+        - python >=3.8
+      run:
+        - python >=3.8
+        - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
+        - radical.pilot
     test:
       imports:
         - parsl
