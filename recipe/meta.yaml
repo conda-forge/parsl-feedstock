@@ -1,5 +1,5 @@
 {% set name = "parsl" %}
-{% set version = "2023.12.25" %}
+{% set version = "2024.1.1" %}
 
 package:
   name: {{ name|lower }}-split
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/parsl-{{ version }}.tar.gz
-  sha256: 7a27b0337c216699436fdd0c81fd21e7a6c22f7ca7c2da2155f650c1252f89bf
+  sha256: 1d6949023f1f4e9a803b20a88915c8ee12e9b04e4596f03cbee5a8e8e40e359c
 
 build:
   number: 0
@@ -91,7 +91,7 @@ outputs:
         - networkx >=2.5,<2.6
         - flask >=1.0.2
         - flask-sqlalchemy
-        - pandas <2
+        - pandas <3
         - plotly
         # 3.0.1 has a build without proper constraints on setuptools
         - python-daemon !=3.0.1
