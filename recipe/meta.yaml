@@ -40,7 +40,6 @@ outputs:
         - pyzmq >=17.1.2
         - typeguard >=2.10,<3
         - typing-extensions
-        - six
         - globus-sdk
         - dill
         - tblib
