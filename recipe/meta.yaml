@@ -38,7 +38,7 @@ outputs:
         - python >=3.8
         # requirements.txt
         - pyzmq >=17.1.2
-        - typeguard >=2.10,<3
+        - typeguard >=2.10,!=3.*,<5
         - typing-extensions
         - globus-sdk
         - dill
