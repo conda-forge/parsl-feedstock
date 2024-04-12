@@ -10,7 +10,7 @@ source:
   sha256: a181d581b97d54e94459c226fae878e7843d9e989d2561955c883e40bc88c1fd
 
 build:
-  number: 0
+  number: 1
   noarch: python
 
 requirements:
@@ -132,10 +132,11 @@ outputs:
       run:
         - python >=3.8
         - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
-        - kubernetes
+        - python-kubernetes
     test:
       imports:
-        - parsl
+        - parsl.providers.kubernetes.kube
+        - kubernetes
       commands:
         - pip check
       requires:
