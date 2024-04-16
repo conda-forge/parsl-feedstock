@@ -47,7 +47,7 @@ outputs:
         - paramiko
         - psutil >=5.5.1
         - setproctitle
-        - filelock>=3.13,<4
+        - filelock >=3.13,<4
 
     test:
       requires:
