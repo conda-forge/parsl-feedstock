@@ -288,7 +288,7 @@ outputs:
       run:
         - python >=3.8
         - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
-        - radical.pilot 1.47
+        - radical.pilot 1.52.1
     test:
       imports:
         - parsl
