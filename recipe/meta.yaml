@@ -1,5 +1,5 @@
 {% set name = "parsl" %}
-{% set version = "2024.5.20" %}
+{% set version = "2024.5.27" %}
 
 package:
   name: {{ name|lower }}-split
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/parsl-{{ version }}.tar.gz
-  sha256: ae6280d0c5560dae11d40397d07228bc2a67f754d7aa225cb008714d5362ef4d
+  sha256: 013d57490c650cf76af2a9fc24e8ee86500703fb10e434f25616a9d678ff95d3
 
 build:
   number: 0
@@ -288,8 +288,8 @@ outputs:
       run:
         - python >=3.8
         - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
-        - radical.pilot 1.52.1
-        - radical.utils 1.52
+        - radical.pilot 1.60
+        - radical.utils 1.60
     test:
       imports:
         - parsl
