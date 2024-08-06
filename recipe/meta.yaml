@@ -16,7 +16,6 @@ build:
 requirements:
   host:
     - python >=3.8
-    - pip
   run:
     - python >=3.8
 
@@ -34,6 +33,7 @@ outputs:
       host:
         - python >=3.8
         - pip
+        - setuptools
       run:
         - python >=3.8
         # requirements.txt
