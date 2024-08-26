@@ -1,5 +1,5 @@
 {% set name = "parsl" %}
-{% set version = "2024.8.12" %}
+{% set version = "2024.8.19" %}
 
 package:
   name: {{ name|lower }}-split
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/parsl-{{ version }}.tar.gz
-  sha256: 13605927fd70791d5c374de93a1264a43f219a9c3b1a1445663d9a39e26fbc56
+  sha256: f046673d9e16db4515b72cd067e1328b56439af412cd88e9051e3d0b58c53ed3
 
 build:
   number: 0
@@ -44,7 +44,6 @@ outputs:
         - dill
         - tblib
         - requests
-        - paramiko
         - psutil >=5.5.1
         - setproctitle
         - filelock >=3.13,<4
@@ -290,6 +289,24 @@ outputs:
         - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
         - radical.pilot 1.60
         - radical.utils 1.60
+    test:
+      imports:
+        - parsl
+      commands:
+        - pip check
+      requires:
+        - pip
+
+  - name: {{ name }}-with-ssh
+    build:
+      noarch: python
+    requirements:
+      host:
+        - python >=3.8
+      run:
+        - python >=3.8
+        - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
+        - paramiko
     test:
       imports:
         - parsl
