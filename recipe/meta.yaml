@@ -44,7 +44,6 @@ outputs:
         - dill
         - tblib
         - requests
-        - paramiko
         - psutil >=5.5.1
         - setproctitle
         - filelock >=3.13,<4
@@ -290,6 +289,24 @@ outputs:
         - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
         - radical.pilot 1.60
         - radical.utils 1.60
+    test:
+      imports:
+        - parsl
+      commands:
+        - pip check
+      requires:
+        - pip
+
+  - name: {{ name }}-with-ssh
+    build:
+      noarch: python
+    requirements:
+      host:
+        - python >=3.8
+      run:
+        - python >=3.8
+        - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
+        - paramiko
     test:
       imports:
         - parsl
