@@ -1,5 +1,5 @@
 {% set name = "parsl" %}
-{% set version = "2024.10.7" %}
+{% set version = "2024.10.14" %}
 
 package:
   name: {{ name|lower }}-split
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/parsl-{{ version }}.tar.gz
-  sha256: ab155f51b92f62bd2a2ca82abe70ea608d280d79b7beaa29fd8ce871d41ae59e
+  sha256: 1d4c4a20297e4a43dc6b442bb01d3d6f21c2fa4e057be3ff806bccd3538e7bd2
 
 build:
   number: 0
@@ -15,9 +15,9 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python >=3.9
   run:
-    - python >=3.8
+    - python >=3.9
 
 outputs:
   - name: {{ name }}
@@ -31,11 +31,11 @@ outputs:
 
     requirements:
       host:
-        - python >=3.8
+        - python >=3.9
         - pip
         - setuptools
       run:
-        - python >=3.8
+        - python >=3.9
         # requirements.txt
         - pyzmq >=17.1.2
         - typeguard >=2.10,!=3.*,<5
@@ -61,9 +61,9 @@ outputs:
       noarch: python
     requirements:
       host:
-        - python >=3.8
+        - python >=3.9
       run:
-        - python >=3.8
+        - python >=3.9
         - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
         - sqlalchemy >=1.4,<2
 
@@ -81,9 +81,9 @@ outputs:
       noarch: python
     requirements:
       host:
-        - python >=3.8
+        - python >=3.9
       run:
-        - python >=3.8
+        - python >=3.9
         - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
         - {{ name }}-with-monitoring
         - pydot
@@ -110,9 +110,9 @@ outputs:
       noarch: python
     requirements:
       host:
-        - python >=3.8
+        - python >=3.9
       run:
-        - python >=3.8
+        - python >=3.9
         - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
         - boto3
     test:
@@ -128,9 +128,9 @@ outputs:
       noarch: python
     requirements:
       host:
-        - python >=3.8
+        - python >=3.9
       run:
-        - python >=3.8
+        - python >=3.9
         - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
         - python-kubernetes
     test:
@@ -148,9 +148,9 @@ outputs:
 #      noarch: python
 #    requirements:
 #      host:
-#        - python >=3.8
+#        - python >=3.9
 #      run:
-#        - python >=3.8
+#        - python >=3.9
 #        - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
 #        - oauth-ssh >=0.9
 #    test:
@@ -166,9 +166,9 @@ outputs:
       noarch: python
     requirements:
       host:
-        - python >=3.8
+        - python >=3.9
       run:
-        - python >=3.8
+        - python >=3.9
         - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
         - google-auth
         - google-api-python-client
@@ -185,9 +185,9 @@ outputs:
       noarch: python
     requirements:
       host:
-        - python >=3.8
+        - python >=3.9
       run:
-        - python >=3.8
+        - python >=3.9
         - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
         - python-gssapi
     test:
@@ -204,9 +204,9 @@ outputs:
 #      noarch: python
 #    requirements:
 #      host:
-#        - python >=3.8
+#        - python >=3.9
 #      run:
-#        - python >=3.8
+#        - python >=3.9
 #        - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
 #        - azure <=4
 #        - msrestazure
@@ -223,9 +223,9 @@ outputs:
       noarch: python
     requirements:
       host:
-        - python >=3.8
+        - python >=3.9
       run:
-        - python >=3.8
+        - python >=3.9
         - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
         - ndcctools
         # there is no work_queue pypi or conda-forge package
@@ -245,9 +245,9 @@ outputs:
       noarch: python
     requirements:
       host:
-        - python >=3.8
+        - python >=3.9
       run:
-        - python >=3.8
+        - python >=3.9
         - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
         - pyyaml
         - cffi
@@ -265,9 +265,9 @@ outputs:
       noarch: python
     requirements:
       host:
-        - python >=3.8
+        - python >=3.9
       run:
-        - python >=3.8
+        - python >=3.9
         - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
         - proxystore
     test:
@@ -283,9 +283,9 @@ outputs:
       noarch: python
     requirements:
       host:
-        - python >=3.8
+        - python >=3.9
       run:
-        - python >=3.8
+        - python >=3.9
         - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
         - radical.pilot 1.60
         - radical.utils 1.60
@@ -302,9 +302,9 @@ outputs:
       noarch: python
     requirements:
       host:
-        - python >=3.8
+        - python >=3.9
       run:
-        - python >=3.8
+        - python >=3.9
         - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
         - paramiko
     test:
