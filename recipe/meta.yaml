@@ -1,13 +1,13 @@
 {% set name = "parsl" %}
-{% set version = "2024.10.28" %}
+{% set version = "2024.11.11" %}
 
 package:
   name: {{ name|lower }}-split
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/parsl-{{ version }}.tar.gz
-  sha256: 966c818c3229d5b0922b3bf4e7465be1c74012827fdf67c51acd65b2b3e7a460
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/parsl-{{ version }}.tar.gz
+  sha256: a3b3247f699d066b7a32d06746dd2dd70127bd34a5eef1ce76e6bc10c22cad69
 
 build:
   number: 0
@@ -142,25 +142,6 @@ outputs:
       requires:
         - pip
 
-# oauth-ssh not on conda-forge
-#  - name: {{ name }}-with-oauth_ssh
-#    build:
-#      noarch: python
-#    requirements:
-#      host:
-#        - python >=3.9
-#      run:
-#        - python >=3.9
-#        - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
-#        - oauth-ssh >=0.9
-#    test:
-#      imports:
-#        - parsl
-#      commands:
-#        - pip check
-#      requires:
-#        - pip
-
   - name: {{ name }}-with-google_cloud
     build:
       noarch: python
@@ -289,24 +270,6 @@ outputs:
         - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
         - radical.pilot 1.60
         - radical.utils 1.60
-    test:
-      imports:
-        - parsl
-      commands:
-        - pip check
-      requires:
-        - pip
-
-  - name: {{ name }}-with-ssh
-    build:
-      noarch: python
-    requirements:
-      host:
-        - python >=3.9
-      run:
-        - python >=3.9
-        - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
-        - paramiko
     test:
       imports:
         - parsl
