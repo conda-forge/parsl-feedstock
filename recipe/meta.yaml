@@ -15,9 +15,9 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
   run:
-    - python >=3.9
+    - python >={{ python_min }}
 
 outputs:
   - name: {{ name }}
@@ -31,11 +31,11 @@ outputs:
 
     requirements:
       host:
-        - python >=3.9
+        - python {{ python_min }}
         - pip
         - setuptools
       run:
-        - python >=3.9
+        - python >={{ python_min }}
         # requirements.txt
         - pyzmq >=17.1.2
         - typeguard >=2.10,!=3.*,<5
@@ -50,6 +50,7 @@ outputs:
 
     test:
       requires:
+        - python {{ python_min }}
         - pip
       imports:
         - parsl
@@ -61,9 +62,9 @@ outputs:
       noarch: python
     requirements:
       host:
-        - python >=3.9
+        - python {{ python_min }}
       run:
-        - python >=3.9
+        - python >={{ python_min }}
         - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
         - sqlalchemy >=1.4,<2
 
@@ -74,6 +75,7 @@ outputs:
       commands:
         - pip check
       requires:
+        - python {{ python_min }}
         - pip
 
   - name: {{ name }}-with-visualization
@@ -81,9 +83,9 @@ outputs:
       noarch: python
     requirements:
       host:
-        - python >=3.9
+        - python {{ python_min }}
       run:
-        - python >=3.9
+        - python >={{ python_min }}
         - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
         - {{ name }}-with-monitoring
         - pydot
@@ -103,6 +105,7 @@ outputs:
         - pip check
         - parsl-visualize --help
       requires:
+        - python {{ python_min }}
         - pip
 
   - name: {{ name }}-with-aws
@@ -110,9 +113,9 @@ outputs:
       noarch: python
     requirements:
       host:
-        - python >=3.9
+        - python {{ python_min }}
       run:
-        - python >=3.9
+        - python >={{ python_min }}
         - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
         - boto3
     test:
@@ -121,6 +124,7 @@ outputs:
       commands:
         - pip check
       requires:
+        - python {{ python_min }}
         - pip
 
   - name: {{ name }}-with-kubernetes
@@ -128,9 +132,9 @@ outputs:
       noarch: python
     requirements:
       host:
-        - python >=3.9
+        - python {{ python_min }}
       run:
-        - python >=3.9
+        - python >={{ python_min }}
         - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
         - python-kubernetes
     test:
@@ -140,6 +144,7 @@ outputs:
       commands:
         - pip check
       requires:
+        - python {{ python_min }}
         - pip
 
   - name: {{ name }}-with-google_cloud
@@ -147,9 +152,9 @@ outputs:
       noarch: python
     requirements:
       host:
-        - python >=3.9
+        - python {{ python_min }}
       run:
-        - python >=3.9
+        - python >={{ python_min }}
         - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
         - google-auth
         - google-api-python-client
@@ -159,6 +164,7 @@ outputs:
       commands:
         - pip check
       requires:
+        - python {{ python_min }}
         - pip
 
   - name: {{ name }}-with-gssapi
@@ -166,9 +172,9 @@ outputs:
       noarch: python
     requirements:
       host:
-        - python >=3.9
+        - python {{ python_min }}
       run:
-        - python >=3.9
+        - python >={{ python_min }}
         - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
         - python-gssapi
     test:
@@ -177,6 +183,7 @@ outputs:
       commands:
         - pip check
       requires:
+        - python {{ python_min }}
         - pip
 
 # azure 3.0.0 was not built for linux
@@ -185,9 +192,9 @@ outputs:
 #      noarch: python
 #    requirements:
 #      host:
-#        - python >=3.9
+#        - python {{ python_min }}
 #      run:
-#        - python >=3.9
+#        - python >={{ python_min }}
 #        - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
 #        - azure <=4
 #        - msrestazure
@@ -197,6 +204,7 @@ outputs:
 #      commands:
 #        - pip check
 #      requires:
+#        - python {{ python_min }}
 #        - pip
 
   - name: {{ name }}-with-workqueue
@@ -204,9 +212,9 @@ outputs:
       noarch: python
     requirements:
       host:
-        - python >=3.9
-      run:
-        - python >=3.9
+        - python {{ python_min }}
+       run:
+        - python >={{ python_min }}
         - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
         - ndcctools
         # there is no work_queue pypi or conda-forge package
@@ -215,20 +223,19 @@ outputs:
       imports:
         - parsl
       commands:
-        # temporarily disable pip check because conda 23.10.0 (a dependency of ndcctools) 
-        # is failing pip check becaue of https://github.com/conda-forge/conda-feedstock/pull/225
-        # - pip check
+        - pip check
       requires:
-        # - pip
+        - python {{ python_min }}
+        - pip
 
   - name: {{ name }}-with-flux
     build:
       noarch: python
     requirements:
       host:
-        - python >=3.9
+        - python {{ python_min }}
       run:
-        - python >=3.9
+        - python >={{ python_min }}
         - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
         - pyyaml
         - cffi
@@ -239,6 +246,7 @@ outputs:
       commands:
         - pip check
       requires:
+        - python {{ python_min }}
         - pip
 
   - name: {{ name }}-with-proxystore
@@ -246,9 +254,9 @@ outputs:
       noarch: python
     requirements:
       host:
-        - python >=3.9
+        - python {{ python_min }}
       run:
-        - python >=3.9
+        - python >={{ python_min }}
         - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
         - proxystore
     test:
@@ -257,6 +265,7 @@ outputs:
       commands:
         - pip check
       requires:
+        - python {{ python_min }}
         - pip
 
   - name: {{ name }}-with-radical-pilot
@@ -264,9 +273,9 @@ outputs:
       noarch: python
     requirements:
       host:
-        - python >=3.9
+        - python {{ python_min }}
       run:
-        - python >=3.9
+        - python >={{ python_min }}
         - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
         - radical.pilot 1.60
         - radical.utils 1.60
@@ -276,6 +285,7 @@ outputs:
       commands:
         - pip check
       requires:
+        - python {{ python_min }}
         - pip
 
 about:
