@@ -213,7 +213,7 @@ outputs:
     requirements:
       host:
         - python {{ python_min }}
-       run:
+      run:
         - python >={{ python_min }}
         - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
         - ndcctools
