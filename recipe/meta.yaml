@@ -277,8 +277,8 @@ outputs:
       run:
         - python >={{ python_min }}
         - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
-        - radical.pilot 1.60
-        - radical.utils 1.60
+        - radical.pilot 1.90
+        - radical.utils 1.90
     test:
       imports:
         - parsl
