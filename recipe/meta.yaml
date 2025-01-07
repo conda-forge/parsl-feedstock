@@ -1,5 +1,5 @@
 {% set name = "parsl" %}
-{% set version = "2024.12.30" %}
+{% set version = "2025.1.6" %}
 
 package:
   name: {{ name|lower }}-split
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/parsl-{{ version }}.tar.gz
-  sha256: a169bee8c4d55bbaeb6edc3204380e21fc6b52b61c2c65539e3eb15e47c3651a
+  sha256: 9e1bbd02f274e556932c89cc25e57a8533788f50a92b90e60c9dfac6bea0c523
 
 build:
   number: 0
@@ -66,7 +66,7 @@ outputs:
       run:
         - python >={{ python_min }}
         - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
-        - sqlalchemy >=1.4,<2
+        - sqlalchemy >=2,<2.1
 
     test:
       imports:
@@ -88,8 +88,8 @@ outputs:
         - python >={{ python_min }}
         - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
         - {{ name }}-with-monitoring
-        - pydot
-        - networkx >=2.5,<2.6
+        - pydot >=1.4.2
+        - networkx >=3.2,<3.3
         - flask >=1.0.2
         - flask-sqlalchemy
         - pandas <2.2
