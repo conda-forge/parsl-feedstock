@@ -92,7 +92,7 @@ outputs:
         - networkx >=3.2,<3.3
         - flask >=1.0.2
         - flask-sqlalchemy
-        - pandas <2.2
+        - pandas >=2.2,<3
         - plotly
         # 3.0.1 has a build without proper constraints on setuptools
         - python-daemon !=3.0.1
