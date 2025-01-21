@@ -288,6 +288,25 @@ outputs:
         - python {{ python_min }}
         - pip
 
+  - name: {{ name }}-with-globus_compute
+    build:
+      noarch: python
+    requirements:
+      host:
+        - python {{ python_min }}
+      run:
+        - python >={{ python_min }}
+        - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
+        - globus-compute-sdk >=2.34.0
+    test:
+      imports:
+        - parsl
+      commands:
+        - pip check
+      requires:
+        - python {{ python_min }}
+        - pip
+
 about:
   home: https://github.com/Parsl/parsl
   license: Apache-2.0
