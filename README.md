@@ -191,8 +191,8 @@ Parsl is a Python library for programming and executing
 data-oriented workflows (dataflows) in parallel.
 
 
-About parsl-with-workqueue
---------------------------
+About parsl-with-visualization
+------------------------------
 
 Home: https://github.com/Parsl/parsl
 
@@ -208,8 +208,8 @@ Parsl is a Python library for programming and executing
 data-oriented workflows (dataflows) in parallel.
 
 
-About parsl-with-visualization
-------------------------------
+About parsl-with-workqueue
+--------------------------
 
 Home: https://github.com/Parsl/parsl
 
@@ -246,8 +246,8 @@ Current release info
 | [![Conda Recipe](https://img.shields.io/badge/recipe-parsl-green.svg)](https://anaconda.org/conda-forge/parsl) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/parsl.svg)](https://anaconda.org/conda-forge/parsl) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/parsl.svg)](https://anaconda.org/conda-forge/parsl) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/parsl.svg)](https://anaconda.org/conda-forge/parsl) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-parsl--with--aws-green.svg)](https://anaconda.org/conda-forge/parsl-with-aws) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/parsl-with-aws.svg)](https://anaconda.org/conda-forge/parsl-with-aws) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/parsl-with-aws.svg)](https://anaconda.org/conda-forge/parsl-with-aws) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/parsl-with-aws.svg)](https://anaconda.org/conda-forge/parsl-with-aws) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-parsl--with--flux-green.svg)](https://anaconda.org/conda-forge/parsl-with-flux) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/parsl-with-flux.svg)](https://anaconda.org/conda-forge/parsl-with-flux) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/parsl-with-flux.svg)](https://anaconda.org/conda-forge/parsl-with-flux) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/parsl-with-flux.svg)](https://anaconda.org/conda-forge/parsl-with-flux) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-parsl--with--globus_compute-green.svg)](https://anaconda.org/conda-forge/parsl-with-globus_compute) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/parsl-with-globus_compute.svg)](https://anaconda.org/conda-forge/parsl-with-globus_compute) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/parsl-with-globus_compute.svg)](https://anaconda.org/conda-forge/parsl-with-globus_compute) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/parsl-with-globus_compute.svg)](https://anaconda.org/conda-forge/parsl-with-globus_compute) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-parsl--with--google_cloud-green.svg)](https://anaconda.org/conda-forge/parsl-with-google_cloud) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/parsl-with-google_cloud.svg)](https://anaconda.org/conda-forge/parsl-with-google_cloud) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/parsl-with-google_cloud.svg)](https://anaconda.org/conda-forge/parsl-with-google_cloud) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/parsl-with-google_cloud.svg)](https://anaconda.org/conda-forge/parsl-with-google_cloud) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-parsl--with--globus__compute-green.svg)](https://anaconda.org/conda-forge/parsl-with-globus_compute) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/parsl-with-globus_compute.svg)](https://anaconda.org/conda-forge/parsl-with-globus_compute) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/parsl-with-globus_compute.svg)](https://anaconda.org/conda-forge/parsl-with-globus_compute) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/parsl-with-globus_compute.svg)](https://anaconda.org/conda-forge/parsl-with-globus_compute) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-parsl--with--google__cloud-green.svg)](https://anaconda.org/conda-forge/parsl-with-google_cloud) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/parsl-with-google_cloud.svg)](https://anaconda.org/conda-forge/parsl-with-google_cloud) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/parsl-with-google_cloud.svg)](https://anaconda.org/conda-forge/parsl-with-google_cloud) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/parsl-with-google_cloud.svg)](https://anaconda.org/conda-forge/parsl-with-google_cloud) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-parsl--with--gssapi-green.svg)](https://anaconda.org/conda-forge/parsl-with-gssapi) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/parsl-with-gssapi.svg)](https://anaconda.org/conda-forge/parsl-with-gssapi) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/parsl-with-gssapi.svg)](https://anaconda.org/conda-forge/parsl-with-gssapi) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/parsl-with-gssapi.svg)](https://anaconda.org/conda-forge/parsl-with-gssapi) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-parsl--with--kubernetes-green.svg)](https://anaconda.org/conda-forge/parsl-with-kubernetes) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/parsl-with-kubernetes.svg)](https://anaconda.org/conda-forge/parsl-with-kubernetes) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/parsl-with-kubernetes.svg)](https://anaconda.org/conda-forge/parsl-with-kubernetes) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/parsl-with-kubernetes.svg)](https://anaconda.org/conda-forge/parsl-with-kubernetes) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-parsl--with--monitoring-green.svg)](https://anaconda.org/conda-forge/parsl-with-monitoring) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/parsl-with-monitoring.svg)](https://anaconda.org/conda-forge/parsl-with-monitoring) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/parsl-with-monitoring.svg)](https://anaconda.org/conda-forge/parsl-with-monitoring) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/parsl-with-monitoring.svg)](https://anaconda.org/conda-forge/parsl-with-monitoring) |
