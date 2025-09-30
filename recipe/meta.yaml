@@ -1,5 +1,5 @@
 {% set name = "parsl" %}
-{% set version = "2025.9.22" %}
+{% set version = "2025.9.29" %}
 
 package:
   name: {{ name|lower }}-split
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/parsl-{{ version }}.tar.gz
-  sha256: 728850480a213bacd623212c340aec300c61559751f9a7fe788974ec59a59826
+  sha256: f0d82bea9e19e0705440702928e2c81af11b59ff444d23bbb41df478963ee609
 
 build:
   number: 0
