@@ -1,5 +1,5 @@
 {% set name = "parsl" %}
-{% set version = "2025.10.20" %}
+{% set version = "2025.10.27" %}
 
 package:
   name: {{ name|lower }}-split
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/parsl-{{ version }}.tar.gz
-  sha256: b494cc36b44e034c8945ad1347f2560afc5fb7ece1eaa6500c2037ac6ec43991
+  sha256: 5b62d18190a6ea32b24f99385799ab499829e3c22880c5a907979f1e05c06f3c
 
 build:
   number: 0
@@ -40,7 +40,6 @@ outputs:
         - pyzmq >=17.1.2
         - typeguard >=2.10,!=3.*,<5
         - typing-extensions
-        - globus-sdk
         - dill
         - tblib
         - requests
@@ -299,6 +298,25 @@ outputs:
         - python >={{ python_min }}
         - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
         - globus-compute-sdk >=2.34.0
+    test:
+      imports:
+        - parsl
+      commands:
+        - pip check
+      requires:
+        - python {{ python_min }}
+        - pip
+
+  - name: {{ name }}-with-globus_transfer
+    build:
+      noarch: python
+    requirements:
+      host:
+        - python {{ python_min }}
+      run:
+        - python >={{ python_min }}
+        - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
+        - globus-sdk
     test:
       imports:
         - parsl
