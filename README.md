@@ -1,29 +1,8 @@
-About parsl-split-feedstock
-===========================
+About parsl-feedstock
+=====================
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/parsl-feedstock/blob/main/LICENSE.txt)
 
-
-About parsl-split
------------------
-
-Home: https://github.com/Parsl/parsl
-
-Package license: Apache-2.0
-
-Summary: Simple parallel workflows system for Python
-
-Development: https://github.com/Parsl/parsl
-
-Documentation: https://parsl.readthedocs.io/
-
-Parsl is a Python library for programming and executing 
-data-oriented workflows (dataflows) in parallel.
-
-
-About parsl
------------
-
 Home: https://github.com/Parsl/parsl
 
 Package license: Apache-2.0
@@ -36,211 +15,6 @@ Documentation: https://parsl.readthedocs.io/
 
 Parsl is a Python library for programming and executing
 data-oriented workflows (dataflows) in parallel.
-
-
-About parsl-with-aws
---------------------
-
-Home: https://github.com/Parsl/parsl
-
-Package license: Apache-2.0
-
-Summary: Simple parallel workflows system for Python
-
-Development: https://github.com/Parsl/parsl
-
-Documentation: https://parsl.readthedocs.io/
-
-Parsl is a Python library for programming and executing
-data-oriented workflows (dataflows) in parallel.
-
-
-About parsl-with-flux
----------------------
-
-Home: https://github.com/Parsl/parsl
-
-Package license: Apache-2.0
-
-Summary: Simple parallel workflows system for Python
-
-Development: https://github.com/Parsl/parsl
-
-Documentation: https://parsl.readthedocs.io/
-
-Parsl is a Python library for programming and executing
-data-oriented workflows (dataflows) in parallel.
-
-
-About parsl-with-globus_compute
--------------------------------
-
-Home: https://github.com/Parsl/parsl
-
-Package license: Apache-2.0
-
-Summary: Simple parallel workflows system for Python
-
-Development: https://github.com/Parsl/parsl
-
-Documentation: https://parsl.readthedocs.io/
-
-Parsl is a Python library for programming and executing
-data-oriented workflows (dataflows) in parallel.
-
-
-About parsl-with-globus_transfer
---------------------------------
-
-Home: https://github.com/Parsl/parsl
-
-Package license: Apache-2.0
-
-Summary: Simple parallel workflows system for Python
-
-Development: https://github.com/Parsl/parsl
-
-Documentation: https://parsl.readthedocs.io/
-
-Parsl is a Python library for programming and executing
-data-oriented workflows (dataflows) in parallel.
-
-
-About parsl-with-google_cloud
------------------------------
-
-Home: https://github.com/Parsl/parsl
-
-Package license: Apache-2.0
-
-Summary: Simple parallel workflows system for Python
-
-Development: https://github.com/Parsl/parsl
-
-Documentation: https://parsl.readthedocs.io/
-
-Parsl is a Python library for programming and executing
-data-oriented workflows (dataflows) in parallel.
-
-
-About parsl-with-gssapi
------------------------
-
-Home: https://github.com/Parsl/parsl
-
-Package license: Apache-2.0
-
-Summary: Simple parallel workflows system for Python
-
-Development: https://github.com/Parsl/parsl
-
-Documentation: https://parsl.readthedocs.io/
-
-Parsl is a Python library for programming and executing
-data-oriented workflows (dataflows) in parallel.
-
-
-About parsl-with-kubernetes
----------------------------
-
-Home: https://github.com/Parsl/parsl
-
-Package license: Apache-2.0
-
-Summary: Simple parallel workflows system for Python
-
-Development: https://github.com/Parsl/parsl
-
-Documentation: https://parsl.readthedocs.io/
-
-Parsl is a Python library for programming and executing
-data-oriented workflows (dataflows) in parallel.
-
-
-About parsl-with-monitoring
----------------------------
-
-Home: https://github.com/Parsl/parsl
-
-Package license: Apache-2.0
-
-Summary: Simple parallel workflows system for Python
-
-Development: https://github.com/Parsl/parsl
-
-Documentation: https://parsl.readthedocs.io/
-
-Parsl is a Python library for programming and executing
-data-oriented workflows (dataflows) in parallel.
-
-
-About parsl-with-proxystore
----------------------------
-
-Home: https://github.com/Parsl/parsl
-
-Package license: Apache-2.0
-
-Summary: Simple parallel workflows system for Python
-
-Development: https://github.com/Parsl/parsl
-
-Documentation: https://parsl.readthedocs.io/
-
-Parsl is a Python library for programming and executing
-data-oriented workflows (dataflows) in parallel.
-
-
-About parsl-with-radical-pilot
-------------------------------
-
-Home: https://github.com/Parsl/parsl
-
-Package license: Apache-2.0
-
-Summary: Simple parallel workflows system for Python
-
-Development: https://github.com/Parsl/parsl
-
-Documentation: https://parsl.readthedocs.io/
-
-Parsl is a Python library for programming and executing
-data-oriented workflows (dataflows) in parallel.
-
-
-About parsl-with-visualization
-------------------------------
-
-Home: https://github.com/Parsl/parsl
-
-Package license: Apache-2.0
-
-Summary: Simple parallel workflows system for Python
-
-Development: https://github.com/Parsl/parsl
-
-Documentation: https://parsl.readthedocs.io/
-
-Parsl is a Python library for programming and executing
-data-oriented workflows (dataflows) in parallel.
-
-
-About parsl-with-workqueue
---------------------------
-
-Home: https://github.com/Parsl/parsl
-
-Package license: Apache-2.0
-
-Summary: Simple parallel workflows system for Python
-
-Development: https://github.com/Parsl/parsl
-
-Documentation: https://parsl.readthedocs.io/
-
-Parsl is a Python library for programming and executing
-data-oriented workflows (dataflows) in parallel.
-
 
 Current build status
 ====================
@@ -262,6 +36,7 @@ Current release info
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-parsl-green.svg)](https://anaconda.org/conda-forge/parsl) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/parsl.svg)](https://anaconda.org/conda-forge/parsl) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/parsl.svg)](https://anaconda.org/conda-forge/parsl) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/parsl.svg)](https://anaconda.org/conda-forge/parsl) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-parsl--with--aws-green.svg)](https://anaconda.org/conda-forge/parsl-with-aws) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/parsl-with-aws.svg)](https://anaconda.org/conda-forge/parsl-with-aws) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/parsl-with-aws.svg)](https://anaconda.org/conda-forge/parsl-with-aws) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/parsl-with-aws.svg)](https://anaconda.org/conda-forge/parsl-with-aws) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-parsl--with--azure-green.svg)](https://anaconda.org/conda-forge/parsl-with-azure) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/parsl-with-azure.svg)](https://anaconda.org/conda-forge/parsl-with-azure) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/parsl-with-azure.svg)](https://anaconda.org/conda-forge/parsl-with-azure) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/parsl-with-azure.svg)](https://anaconda.org/conda-forge/parsl-with-azure) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-parsl--with--flux-green.svg)](https://anaconda.org/conda-forge/parsl-with-flux) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/parsl-with-flux.svg)](https://anaconda.org/conda-forge/parsl-with-flux) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/parsl-with-flux.svg)](https://anaconda.org/conda-forge/parsl-with-flux) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/parsl-with-flux.svg)](https://anaconda.org/conda-forge/parsl-with-flux) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-parsl--with--globus__compute-green.svg)](https://anaconda.org/conda-forge/parsl-with-globus_compute) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/parsl-with-globus_compute.svg)](https://anaconda.org/conda-forge/parsl-with-globus_compute) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/parsl-with-globus_compute.svg)](https://anaconda.org/conda-forge/parsl-with-globus_compute) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/parsl-with-globus_compute.svg)](https://anaconda.org/conda-forge/parsl-with-globus_compute) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-parsl--with--globus__transfer-green.svg)](https://anaconda.org/conda-forge/parsl-with-globus_transfer) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/parsl-with-globus_transfer.svg)](https://anaconda.org/conda-forge/parsl-with-globus_transfer) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/parsl-with-globus_transfer.svg)](https://anaconda.org/conda-forge/parsl-with-globus_transfer) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/parsl-with-globus_transfer.svg)](https://anaconda.org/conda-forge/parsl-with-globus_transfer) |
@@ -274,26 +49,26 @@ Current release info
 | [![Conda Recipe](https://img.shields.io/badge/recipe-parsl--with--visualization-green.svg)](https://anaconda.org/conda-forge/parsl-with-visualization) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/parsl-with-visualization.svg)](https://anaconda.org/conda-forge/parsl-with-visualization) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/parsl-with-visualization.svg)](https://anaconda.org/conda-forge/parsl-with-visualization) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/parsl-with-visualization.svg)](https://anaconda.org/conda-forge/parsl-with-visualization) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-parsl--with--workqueue-green.svg)](https://anaconda.org/conda-forge/parsl-with-workqueue) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/parsl-with-workqueue.svg)](https://anaconda.org/conda-forge/parsl-with-workqueue) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/parsl-with-workqueue.svg)](https://anaconda.org/conda-forge/parsl-with-workqueue) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/parsl-with-workqueue.svg)](https://anaconda.org/conda-forge/parsl-with-workqueue) |
 
-Installing parsl-split
-======================
+Installing parsl
+================
 
-Installing `parsl-split` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `parsl` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `parsl, parsl-with-aws, parsl-with-flux, parsl-with-globus_compute, parsl-with-globus_transfer, parsl-with-google_cloud, parsl-with-gssapi, parsl-with-kubernetes, parsl-with-monitoring, parsl-with-proxystore, parsl-with-radical-pilot, parsl-with-visualization, parsl-with-workqueue` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `parsl, parsl-with-aws, parsl-with-azure, parsl-with-flux, parsl-with-globus_compute, parsl-with-globus_transfer, parsl-with-google_cloud, parsl-with-gssapi, parsl-with-kubernetes, parsl-with-monitoring, parsl-with-proxystore, parsl-with-radical-pilot, parsl-with-visualization, parsl-with-workqueue` can be installed with `conda`:
 
 ```
-conda install parsl parsl-with-aws parsl-with-flux parsl-with-globus_compute parsl-with-globus_transfer parsl-with-google_cloud parsl-with-gssapi parsl-with-kubernetes parsl-with-monitoring parsl-with-proxystore parsl-with-radical-pilot parsl-with-visualization parsl-with-workqueue
+conda install parsl parsl-with-aws parsl-with-azure parsl-with-flux parsl-with-globus_compute parsl-with-globus_transfer parsl-with-google_cloud parsl-with-gssapi parsl-with-kubernetes parsl-with-monitoring parsl-with-proxystore parsl-with-radical-pilot parsl-with-visualization parsl-with-workqueue
 ```
 
 or with `mamba`:
 
 ```
-mamba install parsl parsl-with-aws parsl-with-flux parsl-with-globus_compute parsl-with-globus_transfer parsl-with-google_cloud parsl-with-gssapi parsl-with-kubernetes parsl-with-monitoring parsl-with-proxystore parsl-with-radical-pilot parsl-with-visualization parsl-with-workqueue
+mamba install parsl parsl-with-aws parsl-with-azure parsl-with-flux parsl-with-globus_compute parsl-with-globus_transfer parsl-with-google_cloud parsl-with-gssapi parsl-with-kubernetes parsl-with-monitoring parsl-with-proxystore parsl-with-radical-pilot parsl-with-visualization parsl-with-workqueue
 ```
 
 It is possible to list all of the versions of `parsl` available on your platform with `conda`:
@@ -363,17 +138,17 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating parsl-split-feedstock
-==============================
+Updating parsl-feedstock
+========================
 
-If you would like to improve the parsl-split recipe or build a new
+If you would like to improve the parsl recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/parsl-split-feedstock are
+Note that all branches in the conda-forge/parsl-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks, and branches in the main repository should only be used to
 build distinct package versions.
