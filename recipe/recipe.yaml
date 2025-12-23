@@ -178,24 +178,25 @@ outputs:
           pip_check: true
           python_version: ${{ python_min }}.*
 
-  - package:
-      name: ${{ name }}-with-azure
-    build:
-      noarch: python
-    requirements:
-      host:
-        - python ${{ python_min }}.*
-      run:
-        - python >=${{ python_min }}
-        - ${{ pin_subpackage(name, exact=True) }}
-        - azure <=4
-        - msrestazure
-    tests:
-      - python:
-          imports:
-            - parsl
-          pip_check: true
-          python_version: ${{ python_min }}.*
+  # azure <= 4 cannot be installed with python >=3.10
+  # - package:
+  #     name: ${{ name }}-with-azure
+  #   build:
+  #     noarch: python
+  #   requirements:
+  #     host:
+  #       - python ${{ python_min }}.*
+  #     run:
+  #       - python >=${{ python_min }}
+  #       - ${{ pin_subpackage(name, exact=True) }}
+  #       - azure <=4
+  #       - msrestazure
+  #   tests:
+  #     - python:
+  #         imports:
+  #           - parsl
+  #         pip_check: true
+  #         python_version: ${{ python_min }}.*
 
   - package:
       name: ${{ name }}-with-workqueue
