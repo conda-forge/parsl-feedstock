@@ -135,6 +135,8 @@ outputs:
           imports:
             - parsl.providers.kubernetes.kube
             - kubernetes
+          pip_check: true
+          python_version: ${{ python_min }}.*
 
   - package:
       name: ${{ name }}-with-google_cloud
@@ -260,8 +262,8 @@ outputs:
       run:
         - python >=${{ python_min }}
         - ${{ pin_subpackage(name, exact=True) }}
-        - radical.pilot 1.90
-        - radical.utils 1.90
+        - radical.pilot ==1.90
+        - radical.utils ==1.90
     tests:
       - python:
           imports:
@@ -284,6 +286,8 @@ outputs:
       - python:
           imports:
             - parsl
+          pip_check: true
+          python_version: ${{ python_min }}.*
 
   - package:
       name: ${{ name }}-with-globus_transfer
