@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: parsl
-  version: "2026.5.11"
+  version: "2026.5.18"
 
 recipe:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ recipe:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/parsl-${{ version }}.tar.gz
-  sha256: 4bf1210e4f60105b3cbc41873f3e9ae7e32842236d166615a992620851ee6172
+  sha256: 2d54fdc51e9285f3ea47df86e42bd784d3aee5ba4dafbff12a607036dedc406d
 
 build:
   number: 0
