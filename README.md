@@ -59,31 +59,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `parsl, parsl-with-aws, parsl-with-flux, parsl-with-globus_compute, parsl-with-globus_transfer, parsl-with-google_cloud, parsl-with-gssapi, parsl-with-kubernetes, parsl-with-monitoring, parsl-with-proxystore, parsl-with-radical-pilot, parsl-with-visualization, parsl-with-workqueue` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install parsl parsl-with-aws parsl-with-flux parsl-with-globus_compute parsl-with-globus_transfer parsl-with-google_cloud parsl-with-gssapi parsl-with-kubernetes parsl-with-monitoring parsl-with-proxystore parsl-with-radical-pilot parsl-with-visualization parsl-with-workqueue
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install parsl parsl-with-aws parsl-with-flux parsl-with-globus_compute parsl-with-globus_transfer parsl-with-google_cloud parsl-with-gssapi parsl-with-kubernetes parsl-with-monitoring parsl-with-proxystore parsl-with-radical-pilot parsl-with-visualization parsl-with-workqueue
 ```
 
-It is possible to list all of the versions of `parsl` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add parsl parsl-with-aws parsl-with-flux parsl-with-globus_compute parsl-with-globus_transfer parsl-with-google_cloud parsl-with-gssapi parsl-with-kubernetes parsl-with-monitoring parsl-with-proxystore parsl-with-radical-pilot parsl-with-visualization parsl-with-workqueue
+# for installing globally
+pixi global install parsl parsl-with-aws parsl-with-flux parsl-with-globus_compute parsl-with-globus_transfer parsl-with-google_cloud parsl-with-gssapi parsl-with-kubernetes parsl-with-monitoring parsl-with-proxystore parsl-with-radical-pilot parsl-with-visualization parsl-with-workqueue
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `parsl` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search parsl --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search parsl --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search parsl --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -95,6 +137,8 @@ mamba repoquery whoneeds parsl --channel conda-forge
 # List dependencies of `parsl`:
 mamba repoquery depends parsl --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge

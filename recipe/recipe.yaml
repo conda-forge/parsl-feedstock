@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: parsl
-  version: "2026.7.27"
+  version: "2026.8.10"
 
 recipe:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ recipe:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/parsl-${{ version }}.tar.gz
-  sha256: a31e329e708b05bea837dcddf9647e93788514f072476d3e9af6f40be04d6c7e
+  sha256: ff811a6f57981eb8ea51a0ed9125971d557fdad51b63d30cbbdc3567c8eeb825
 
 build:
   number: 0
@@ -52,7 +52,9 @@ outputs:
           imports:
             - parsl
           pip_check: true
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
 
   - package:
       name: ${{ name }}-with-monitoring
@@ -72,7 +74,9 @@ outputs:
             - parsl
             - parsl.monitoring
           pip_check: true
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
 
   - package:
       name: ${{ name }}-with-visualization
@@ -100,7 +104,9 @@ outputs:
             - parsl
             - parsl.monitoring
           pip_check: true
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
       - script:
           - parsl-visualize --help
 
@@ -120,7 +126,9 @@ outputs:
           imports:
             - parsl
           pip_check: true
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
 
   - package:
       name: ${{ name }}-with-kubernetes
@@ -139,7 +147,9 @@ outputs:
             - parsl.providers.kubernetes.kube
             - kubernetes
           pip_check: true
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
 
   - package:
       name: ${{ name }}-with-google_cloud
@@ -158,7 +168,9 @@ outputs:
           imports:
             - parsl
           pip_check: true
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
 
   - package:
       name: ${{ name }}-with-gssapi
@@ -176,7 +188,9 @@ outputs:
           imports:
             - parsl
           pip_check: true
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
 
   # azure <= 4 cannot be installed with python >=3.10
   # - package:
@@ -216,7 +230,9 @@ outputs:
           imports:
             - parsl
           pip_check: true
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
 
   - package:
       name: ${{ name }}-with-flux
@@ -236,7 +252,9 @@ outputs:
           imports:
             - parsl
           pip_check: true
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
 
   - package:
       name: ${{ name }}-with-proxystore
@@ -254,7 +272,9 @@ outputs:
           imports:
             - parsl
           pip_check: true
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
 
   - package:
       name: ${{ name }}-with-radical-pilot
@@ -273,7 +293,9 @@ outputs:
           imports:
             - parsl
           pip_check: true
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
 
   - package:
       name: ${{ name }}-with-globus_compute
@@ -291,7 +313,9 @@ outputs:
           imports:
             - parsl
           pip_check: true
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
 
   - package:
       name: ${{ name }}-with-globus_transfer
@@ -309,7 +333,9 @@ outputs:
           imports:
             - parsl
           pip_check: true
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
 
 about:
   homepage: https://github.com/Parsl/parsl
