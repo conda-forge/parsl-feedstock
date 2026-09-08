@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: parsl
-  version: "2026.8.10"
+  version: "2026.9.7"
 
 recipe:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ recipe:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/parsl-${{ version }}.tar.gz
-  sha256: ff811a6f57981eb8ea51a0ed9125971d557fdad51b63d30cbbdc3567c8eeb825
+  sha256: cc32890142895ff9739ee505d5568396811fbf7308c50b1abe10b0fec5aaa259
 
 build:
   number: 0
@@ -37,8 +37,8 @@ outputs:
         - python >=${{ python_min }}
         # requirements.txt
         - pyzmq >=17.1.2
-        - typeguard >=2.10,!=3.*,<5
-        - typing-extensions
+        - typeguard >=2.10,<5,!=3.*
+        - typing_extensions >=4.6,<5
         - dill
         - tblib
         - requests
@@ -88,15 +88,15 @@ outputs:
       run:
         - python >=${{ python_min }}
         - ${{ pin_subpackage(name, exact=True) }}
-        - ${{ name }}-with-monitoring
         - pydot >=1.4.2
         - networkx >=3.2,<3.3
         - flask >=1.0.2
         - flask-sqlalchemy
         - pandas >=2.2,<3
-        - plotly
+        - plotly >=5.19,<7
         # 3.0.1 has a build without proper constraints on setuptools
         - python-daemon !=3.0.1
+        - ${{ name }}-with-monitoring
 
     tests:
       - python:
