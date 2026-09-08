@@ -37,8 +37,8 @@ outputs:
         - python >=${{ python_min }}
         # requirements.txt
         - pyzmq >=17.1.2
-        - typeguard >=2.10,!=3.*,<5
-        - typing-extensions
+        - typeguard >=2.10,<5,!=3.*
+        - typing_extensions >=4.6,<5
         - dill
         - tblib
         - requests
@@ -88,15 +88,15 @@ outputs:
       run:
         - python >=${{ python_min }}
         - ${{ pin_subpackage(name, exact=True) }}
-        - ${{ name }}-with-monitoring
         - pydot >=1.4.2
         - networkx >=3.2,<3.3
         - flask >=1.0.2
         - flask-sqlalchemy
         - pandas >=2.2,<3
-        - plotly
+        - plotly >=5.19,<7
         # 3.0.1 has a build without proper constraints on setuptools
         - python-daemon !=3.0.1
+        - ${{ name }}-with-monitoring
 
     tests:
       - python:
