@@ -96,7 +96,6 @@ outputs:
         - plotly >=5.19,<7
         # 3.0.1 has a build without proper constraints on setuptools
         - python-daemon !=3.0.1
-        - ${{ name }}-with-monitoring
 
     tests:
       - python:
