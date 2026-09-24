@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: parsl
-  version: "2026.9.7"
+  version: "2026.9.14"
 
 recipe:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ recipe:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/parsl-${{ version }}.tar.gz
-  sha256: cc32890142895ff9739ee505d5568396811fbf7308c50b1abe10b0fec5aaa259
+  sha256: b90c9559d7fd0f02eebf7000de81877f53828718333ef062c93ae1368d182908
 
 build:
   number: 0
@@ -94,9 +94,7 @@ outputs:
         - flask-sqlalchemy
         - pandas >=2.2,<3
         - plotly >=5.19,<7
-        # 3.0.1 has a build without proper constraints on setuptools
-        - python-daemon !=3.0.1
-        - ${{ name }}-with-monitoring
+        - python-daemon
 
     tests:
       - python:
