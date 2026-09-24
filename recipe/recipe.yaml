@@ -94,6 +94,7 @@ outputs:
         - flask-sqlalchemy
         - pandas >=2.2,<3
         - plotly >=5.19,<7
+        - python-daemon
 
     tests:
       - python:
