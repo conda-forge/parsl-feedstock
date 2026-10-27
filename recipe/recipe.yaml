@@ -37,7 +37,7 @@ outputs:
         - python >=${{ python_min }}
         # requirements.txt
         - pyzmq >=17.1.2
-        - typeguard >=2.10,<5,!=3.*
+        - typeguard >=4,<5
         - typing_extensions >=4.6,<5
         - dill
         - tblib
@@ -45,7 +45,7 @@ outputs:
         - sortedcontainers
         - psutil >=5.5.1
         - setproctitle
-        - filelock >=3.13,<4
+        - filelock >=3.13,<5
 
     tests:
       - python:
